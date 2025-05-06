@@ -1,0 +1,6 @@
+作者：鄭琛諺 林沂箴 陳亭州
+聯絡mail：chenyen0531@gmail.com
+
+Arduino nano --> tool/choose "328P old bootloader"
+#改
+使用esp32
