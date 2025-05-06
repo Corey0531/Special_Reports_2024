@@ -4,7 +4,7 @@
 #include <Arduino.h>
 
 // 外部變數宣告
-extern unsigned long inflateTimeTable[4];
+extern unsigned long inflateTimeTable[5];
 extern bool isCalibrated;
 extern const int AirIn;
 extern const int AirOut;
@@ -15,7 +15,7 @@ void bangBangWithTimingControl(int currentPos, int targetPos) {
   static unsigned long inflateStart = 0;
   static bool isInflating = false;
 
-  if (!isInflating && currentPos < targetPos && targetPos <= 4) {
+  if (!isInflating && currentPos < targetPos && targetPos <= 5) {
     // 根據差距計算總充氣時間
     unsigned long totalTime = 0;
     for (int i = currentPos; i < targetPos; i++) {

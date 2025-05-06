@@ -5,7 +5,7 @@
 
 // 外部變數宣告
 extern volatile int counter;
-extern unsigned long inflateTimeTable[4];
+extern unsigned long inflateTimeTable[5];
 extern const int AirIn;
 extern const int AirOut;
 extern bool isCalibrated;
@@ -14,7 +14,7 @@ void calibrateInflationTimes() {
   Serial.println("開始自動校準...");
   counter = 0;
 
-  for (int i = 0; i < 4; i++) {
+  for (int i = 0; i < 5; i++) {
     unsigned long startTime = millis();
 
     while (counter <= i) {

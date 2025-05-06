@@ -15,7 +15,7 @@ const int encoderMin = 0;
 unsigned long lastControlTime = 0;
 const unsigned long controlInterval = 100;  // 控制頻率間隔（毫秒）
 // 記錄每段的充氣時間（毫秒）
-unsigned long inflateTimeTable[4] = { 0 };  // 0→1, 1→2, ..., 3→4
+unsigned long inflateTimeTable[5] = { 0 };  // 0→1, 1→2, ..., 3→4
 
 bool isCalibrated = false;
 int targetPos = 0;
@@ -63,7 +63,7 @@ void loop() {
     position = counter;
     interrupts();
 
-    bangBangWithTimingControl(position);
+    bangBangWithTimingControl(position, targetPos);
 
     Serial.print("Position: ");
     Serial.println(position);
