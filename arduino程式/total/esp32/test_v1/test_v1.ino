@@ -84,6 +84,8 @@ void executeMode(int mode) {
       break;
     case 1:
       Serial.println("模式 1：執行模式 1 的操作");
+      digitalWrite(AirIn, HIGH);
+      digitalWrite(AirOut, HIGH);
       break;
     case 2:
       Serial.println("模式 2：執行模式 2 的操作");

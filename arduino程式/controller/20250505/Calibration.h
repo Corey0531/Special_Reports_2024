@@ -18,6 +18,10 @@ void calibrateInflationTimes() {
     unsigned long startTime = millis();
 
     while (counter <= i) {
+      if (millis() - timeout > 10000) {  // 超過 10 秒則超時
+        Serial.println("校準超時");
+        break;
+      }
       digitalWrite(AirIn, HIGH);
       digitalWrite(AirOut, LOW);
     }
@@ -30,7 +34,7 @@ void calibrateInflationTimes() {
     Serial.print("Inflate time ");
     Serial.print(i);
     Serial.print("→");
-    Serial.print(i+1);
+    Serial.print(i + 1);
     Serial.print(" = ");
     Serial.print(inflateTimeTable[i]);
     Serial.println(" ms");

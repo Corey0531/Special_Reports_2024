@@ -2,8 +2,8 @@
 #include "BangBangControl.h"
 //腳位定義
 const int encoderPinA = 12, encoderPinB = 13;  // 編碼器腳位
-const int AirIn = 8;                           //輸出調整五口三位閥
-const int AirOut = 9;                          //輸出調整五口三位閥
+const int AirIn = 25;                           //輸出調整五口三位閥
+const int AirOut = 26;                          //輸出調整五口三位閥
 
 //常數定義
 volatile int counter = 0;  // 編碼器計數
